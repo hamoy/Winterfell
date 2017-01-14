@@ -179,6 +179,19 @@ class QuestionPanel extends React.Component {
 				return undefined;
 			}
 
+			let classes = {};
+			//Create a deep copy of the dictionary
+			for (let clazz in this.props.classes) {
+				if (this.props.classes.hasOwnProperty(clazz))
+					classes[clazz] = this.props.classes[clazz];
+			}
+			//Add the classes that exist on the object
+			if (classes["questionSet"] == null)
+				classes["questionSet"] = questionSet.classes;
+			else
+				classes["questionSet"] += " " + questionSet.classes;
+
+
 			return (
 				<QuestionSet key={questionSet.questionSetId}
 							 id={questionSet.questionSetId}
@@ -186,7 +199,7 @@ class QuestionPanel extends React.Component {
 							 questionSetHeader={questionSet.questionSetHeader}
 							 questionSetText={questionSet.questionSetText}
 							 questions={questionSet.questions}
-							 classes={this.props.classes}
+							 classes={classes}
 							 questionAnswers={this.props.questionAnswers}
 							 renderError={this.props.renderError}
 							 renderRequiredAsterisk={this.props.renderRequiredAsterisk}
