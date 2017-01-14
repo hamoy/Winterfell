@@ -47,6 +47,19 @@ class Question extends React.Component {
           })
           .forEach(option =>
             [].forEach.bind(option.conditionalQuestions, conditionalQuestion => {
+
+				let classes = {};
+				//Create a deep copy of the dictionary
+				for (let clazz in this.props.classes) {
+					if (this.props.classes.hasOwnProperty(clazz))
+						classes[clazz] = this.props.classes[clazz];
+				}
+				//Add the classes that exist on the object
+				if (classes["question"] == null)
+					classes["question"] = conditionalQuestion.classes;
+				else
+					classes["question"] += " " + conditionalQuestion.classes;
+
               conditionalItems.push(
                 <Question key={conditionalQuestion.questionId}
                           questionSetId={this.props.questionSetId}
@@ -58,7 +71,7 @@ class Question extends React.Component {
                           validations={conditionalQuestion.validations}
                           value={this.props.questionAnswers[conditionalQuestion.questionId]}
                           input={conditionalQuestion.input}
-                          classes={this.props.classes}
+                          classes={classes}
                           renderError={this.props.renderError}
                           questionAnswers={this.props.questionAnswers}
                           validationErrors={this.props.validationErrors}

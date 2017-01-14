@@ -7,6 +7,19 @@ class QuestionSet extends React.Component {
 
   render() {
     var questions = this.props.questions.map(question => {
+
+		let classes = {};
+		//Create a deep copy of the dictionary
+		for (let clazz in this.props.classes) {
+			if (this.props.classes.hasOwnProperty(clazz))
+				classes[clazz] = this.props.classes[clazz];
+		}
+		//Add the classes that exist on the object
+		if (classes["question"] == null)
+			classes["question"] = question.classes;
+		else
+			classes["question"] += " " + question.classes;
+
       return (
         <Question key={question.questionId}
                   questionSetId={this.props.id}
@@ -18,7 +31,7 @@ class QuestionSet extends React.Component {
                   postText={question.postText}
                   value={this.props.questionAnswers[question.questionId]}
                   input={question.input}
-                  classes={this.props.classes}
+                  classes={classes}
                   renderError={this.props.renderError}
                   renderRequiredAsterisk={this.props.renderRequiredAsterisk}
                   questionAnswers={this.props.questionAnswers}
@@ -48,7 +61,9 @@ class QuestionSet extends React.Component {
                </div>
              )
              : undefined}
-        {questions}
+             <div className={this.props.classes.questionSets}>
+        		{questions}
+             </div>
       </div>
     );
   }
