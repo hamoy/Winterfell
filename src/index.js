@@ -26,11 +26,16 @@ class Winterfell extends React.Component {
 			disableSubmit: false,
 			renderError: undefined,
 			renderRequiredAsterisk: undefined,
-			onSubmit: () => {},
-			onSave: () => {},
-			onUpdate: () => {},
-			onSwitchPanel: () => {},
-			onRender: () => {}
+			onSubmit: () => {
+			},
+			onSave: () => {
+			},
+			onUpdate: () => {
+			},
+			onSwitchPanel: () => {
+			},
+			onRender: () => {
+			}
 		}, this.props);
 
 		this.panelHistory = [];
@@ -179,7 +184,8 @@ class Winterfell extends React.Component {
 		this.props.onRender();
 	}
 
-};
+}
+;
 
 Winterfell.inputTypes = require('./inputTypes');
 Winterfell.errorMessages = require('./lib/errors');

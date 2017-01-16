@@ -260,7 +260,8 @@ class QuestionPanel extends React.Component {
 		);
 	}
 
-};
+}
+;
 
 QuestionPanel.defaultProps = {
 	validationErrors: {},
@@ -284,9 +285,12 @@ QuestionPanel.defaultProps = {
 	questionAnswers: {},
 	renderError: undefined,
 	renderRequiredAsterisk: undefined,
-	onAnswerChange: () => {},
-	onSwitchPanel: () => {},
-	onPanelBack: () => {},
+	onAnswerChange: () => {
+	},
+	onSwitchPanel: () => {
+	},
+	onPanelBack: () => {
+	},
 	panelHistory: [],
 };
 

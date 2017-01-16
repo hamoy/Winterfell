@@ -1,4 +1,3 @@
-
 module.exports = (array) => {
-  return array.slice(0);
+	return array.slice(0);
 };
