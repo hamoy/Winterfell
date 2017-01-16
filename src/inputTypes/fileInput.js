@@ -26,7 +26,8 @@ class FileInput extends React.Component {
                               ? 'required'
                               : undefined}
                   onChange={this.handleChange.bind(this)}
-                  onBlur={this.props.onBlur.bind(null, this.state.value)} />
+                  onBlur={this.props.onBlur.bind(null, this.state.value)}
+                  multiple="multiple"/>
   }
 
 };
