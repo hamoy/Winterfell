@@ -11,14 +11,14 @@ class QuestionSet extends React.Component {
 			let classes = {};
 			//Create a deep copy of the dictionary
 			for (let clazz in this.props.classes) {
-				if (this.props.classes.hasOwnProperty(clazz))
+				if (this.props.classes.hasOwnProperty(clazz) && this.props.classes[clazz] != null)
 					classes[clazz] = this.props.classes[clazz];
 			}
 			//Add the classes that exist on the object
 			if (classes["question"] == null)
-				classes["question"] = question.classes;
+				classes["question"] = question.classes == null ? "" : question.classes;
 			else
-				classes["question"] += " " + question.classes;
+				classes["question"] += (question.classes == null ? "" : " " + question.classes);
 
 			return (
 				<Question key={question.questionId}
