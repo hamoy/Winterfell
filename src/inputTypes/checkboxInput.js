@@ -39,6 +39,7 @@ class CheckboxInput extends React.Component {
 						   className={this.props.classes.checkbox}
 						   defaultChecked={this.state.checked}
 						   value={true}
+						   checked={this.state.checked}
 						   required={this.props.required
 							   ? 'required'
 							   : undefined}

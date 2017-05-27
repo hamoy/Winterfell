@@ -8,7 +8,7 @@ class CheckboxOptionsInput extends React.Component {
 		super(props);
 
 		this.state = {
-			value: this.props.value.length > 0
+			value: this.props.value
 				? cloneArray(this.props.value)
 				: []
 		};
