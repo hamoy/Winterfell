@@ -34,23 +34,12 @@ class FileInput extends React.Component {
 ;
 
 FileInput.defaultProps = {
-<<<<<<< HEAD
-	classes: {},
-	name: undefined,
-	id: undefined,
-	value: undefined,
-	onChange: () => {
-	},
-	onBlur: () => {
-	}
-=======
   classes   : {},
   name      : '',
   id        : '',
   value     : '',
   onChange  : () => {},
   onBlur    : () => {}
->>>>>>> upstream/master
 };
 
 module.exports = FileInput;

@@ -22,13 +22,8 @@ class HiddenInput extends React.Component {
 ;
 
 HiddenInput.defaultProps = {
-<<<<<<< HEAD
-	name: undefined,
-	value: undefined
-=======
   name  : '',
   value : ''
->>>>>>> upstream/master
 };
 
 module.exports = HiddenInput;
