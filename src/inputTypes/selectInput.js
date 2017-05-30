@@ -56,6 +56,7 @@ class SelectInput extends React.Component {
 ;
 
 SelectInput.defaultProps = {
+<<<<<<< HEAD
 	classes: {},
 	name: undefined,
 	id: undefined,
@@ -65,6 +66,15 @@ SelectInput.defaultProps = {
 	},
 	onBlur: () => {
 	}
+=======
+  classes     : {},
+  name        : '',
+  id          : '',
+  value       : '',
+  options     : [],
+  onChange    : () => {},
+  onBlur      : () => {}
+>>>>>>> upstream/master
 };
 
 module.exports = SelectInput;

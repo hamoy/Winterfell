@@ -57,17 +57,14 @@ class CheckboxOptionsInput extends React.Component {
 	}
 
 }
-;
 
 CheckboxOptionsInput.defaultProps = {
-	classes: {},
-	name: undefined,
-	value: [],
-	options: [],
-	onChange: () => {
-	},
-	onBlur: () => {
-	}
+  classes  : {},
+  name     : '',
+  value    : [],
+  options  : [],
+  onChange : () => {},
+  onBlur   : () => {}
 };
 
 module.exports = CheckboxOptionsInput;

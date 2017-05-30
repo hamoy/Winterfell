@@ -52,18 +52,15 @@ class CheckboxInput extends React.Component {
 	}
 
 }
-;
 
 CheckboxInput.defaultProps = {
-	text: '',
-	defaultChecked: false,
-	classes: {},
-	name: undefined,
-	value: undefined,
-	onChange: () => {
-	},
-	onBlur: () => {
-	}
+  text     : '',
+  defaultChecked: false,
+  classes  : {},
+  name     : '',
+  value    : '',
+  onChange : () => {},
+  onBlur   : () => {}
 };
 
 module.exports = CheckboxInput;

@@ -46,6 +46,7 @@ class RadioOptionsInput extends React.Component {
 ;
 
 RadioOptionsInput.defaultProps = {
+<<<<<<< HEAD
 	classes: {},
 	name: undefined,
 	value: undefined,
@@ -54,6 +55,14 @@ RadioOptionsInput.defaultProps = {
 	},
 	onBlur: () => {
 	}
+=======
+  classes  : {},
+  name     : '',
+  value    : '',
+  options  : [],
+  onChange : () => {},
+  onBlur   : () => {}
+>>>>>>> upstream/master
 };
 
 module.exports = RadioOptionsInput;

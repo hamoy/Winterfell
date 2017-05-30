@@ -38,6 +38,7 @@ class EmailInput extends React.Component {
 ;
 
 EmailInput.defaultProps = {
+<<<<<<< HEAD
 	classes: {},
 	name: undefined,
 	id: undefined,
@@ -49,6 +50,16 @@ EmailInput.defaultProps = {
 	},
 	onKeyDown: () => {
 	}
+=======
+  classes     : {},
+  name        : '',
+  id          : '',
+  value       : '',
+  placeholder : '',
+  onChange    : () => {},
+  onBlur      : () => {},
+  onKeyDown   : () => {}
+>>>>>>> upstream/master
 };
 
 module.exports = EmailInput;

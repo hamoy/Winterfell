@@ -37,6 +37,7 @@ class TextareaInput extends React.Component {
 ;
 
 TextareaInput.defaultProps = {
+<<<<<<< HEAD
 	classes: {},
 	name: undefined,
 	id: undefined,
@@ -46,6 +47,15 @@ TextareaInput.defaultProps = {
 	},
 	onBlur: () => {
 	}
+=======
+  classes     : {},
+  name        : '',
+  id          : '',
+  value       : '',
+  placeholder : '',
+  onChange    : () => {},
+  onBlur      : () => {}
+>>>>>>> upstream/master
 };
 
 module.exports = TextareaInput;

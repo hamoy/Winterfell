@@ -38,6 +38,7 @@ class PasswordInput extends React.Component {
 ;
 
 PasswordInput.defaultProps = {
+<<<<<<< HEAD
 	classes: {},
 	name: undefined,
 	id: undefined,
@@ -49,6 +50,16 @@ PasswordInput.defaultProps = {
 	},
 	onKeyDown: () => {
 	}
+=======
+  classes     : {},
+  name        : '',
+  id          : '',
+  value       : '',
+  placeholder : '',
+  onChange    : () => {},
+  onBlur      : () => {},
+  onKeyDown   : () => {}
+>>>>>>> upstream/master
 };
 
 module.exports = PasswordInput;

@@ -34,6 +34,7 @@ class FileInput extends React.Component {
 ;
 
 FileInput.defaultProps = {
+<<<<<<< HEAD
 	classes: {},
 	name: undefined,
 	id: undefined,
@@ -42,6 +43,14 @@ FileInput.defaultProps = {
 	},
 	onBlur: () => {
 	}
+=======
+  classes   : {},
+  name      : '',
+  id        : '',
+  value     : '',
+  onChange  : () => {},
+  onBlur    : () => {}
+>>>>>>> upstream/master
 };
 
 module.exports = FileInput;
