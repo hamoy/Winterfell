@@ -1,5 +1,4 @@
 .DS_Store
 node_modules
 examples/build/app.js
-/dist/
 /npm-debug.log
