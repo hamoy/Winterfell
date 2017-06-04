@@ -247,7 +247,7 @@ class QuestionPanel extends React.Component {
 						: undefined}
 					<Button text={'Save'}
 							onClick={this.handleSaveButtonClick.bind(this)}
-							className={this.props.classes.button}/>
+							className={this.props.classes.saveButton}/>
 					{!this.props.button.disabled
 						? (
 							<Button text={this.props.button.text}
