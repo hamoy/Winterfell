@@ -105,7 +105,7 @@ class Question extends React.Component {
 
 		let labelId = `${this.props.questionId}-label`;
 
-		let classes = this.props.classes.question || "";
+		let classes = (this.props.classes.question || "") + " ";
 		classes += this.props.questionClasses || "";
 
 		return (
