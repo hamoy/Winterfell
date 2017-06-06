@@ -105,8 +105,11 @@ class Question extends React.Component {
 
 		let labelId = `${this.props.questionId}-label`;
 
+		let classes = this.props.classes.question || "";
+		classes += this.props.questionClasses || "";
+
 		return (
-			<div className={this.props.classes.question ? this.props.classes.question + " " + this.props.questionClasses : this.props.questionClasses}>
+			<div className={classes}>
 				{!!this.props.question
 					? (
 						<label className={this.props.classes.label}

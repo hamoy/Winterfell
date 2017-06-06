@@ -102,9 +102,12 @@ var Question = (function (_React$Component) {
 
 			var labelId = this.props.questionId + '-label';
 
+			var classes = this.props.classes.question || "";
+			classes += this.props.questionClasses || "";
+
 			return React.createElement(
 				'div',
-				{ className: this.props.classes.question ? this.props.classes.question + " " + this.props.questionClasses : this.props.questionClasses },
+				{ className: classes },
 				!!this.props.question ? React.createElement(
 					'label',
 					{ className: this.props.classes.label,
