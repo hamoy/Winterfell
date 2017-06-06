@@ -62,14 +62,6 @@ var Question = (function (_React$Component) {
 				}).forEach(function (option) {
 					return [].forEach.bind(option.conditionalQuestions, function (conditionalQuestion) {
 
-						var classes = {};
-						//Create a deep copy of the dictionary
-						for (var clazz in _this.props.classes) {
-							if (_this.props.classes.hasOwnProperty(clazz) && _this.props.classes[clazz] != null) classes[clazz] = _this.props.classes[clazz];
-						}
-						//Add the classes that exist on the object
-						if (classes["question"] == null) classes["question"] = conditionalQuestion.classes == null ? "" : conditionalQuestion.classes;else classes["question"] += conditionalQuestion.classes == null ? "" : " " + conditionalQuestion.classes;
-
 						conditionalItems.push(React.createElement(Question, { key: conditionalQuestion.questionId,
 							questionSetId: _this.props.questionSetId,
 							questionId: conditionalQuestion.questionId,
@@ -80,7 +72,8 @@ var Question = (function (_React$Component) {
 							validations: conditionalQuestion.validations,
 							value: _this.props.questionAnswers[conditionalQuestion.questionId],
 							input: conditionalQuestion.input,
-							classes: classes,
+							classes: _this.props.classes,
+							questionClasses: conditionalQuestion.classes,
 							renderError: _this.props.renderError,
 							questionAnswers: _this.props.questionAnswers,
 							validationErrors: _this.props.validationErrors,
@@ -111,7 +104,7 @@ var Question = (function (_React$Component) {
 
 			return React.createElement(
 				'div',
-				{ className: this.props.classes.question },
+				{ className: this.props.classes.question ? this.props.classes.question + " " + this.props.questionClasses : this.props.questionClasses },
 				!!this.props.question ? React.createElement(
 					'label',
 					{ className: this.props.classes.label,
@@ -179,6 +172,7 @@ Question.defaultProps = {
 		placeholder: undefined
 	},
 	classes: {},
+	questionClasses: '',
 	questionAnswers: {},
 	validationErrors: {},
 	onAnswerChange: function onAnswerChange() {},

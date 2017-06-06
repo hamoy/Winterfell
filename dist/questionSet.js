@@ -28,15 +28,6 @@ var QuestionSet = (function (_React$Component) {
 			var _this = this;
 
 			var questions = this.props.questions.map(function (question) {
-
-				var classes = {};
-				//Create a deep copy of the dictionary
-				for (var clazz in _this.props.classes) {
-					if (_this.props.classes.hasOwnProperty(clazz) && _this.props.classes[clazz] != null) classes[clazz] = _this.props.classes[clazz];
-				}
-				//Add the classes that exist on the object
-				if (classes["question"] == null) classes["question"] = question.classes == null ? "" : question.classes;else classes["question"] += question.classes == null ? "" : " " + question.classes;
-
 				return React.createElement(Question, { key: question.questionId,
 					questionSetId: _this.props.id,
 					questionId: question.questionId,
@@ -47,7 +38,8 @@ var QuestionSet = (function (_React$Component) {
 					postText: question.postText,
 					value: _this.props.questionAnswers[question.questionId],
 					input: question.input,
-					classes: classes,
+					classes: _this.props.classes,
+					questionClasses: question.classes,
 					renderError: _this.props.renderError,
 					renderRequiredAsterisk: _this.props.renderRequiredAsterisk,
 					questionAnswers: _this.props.questionAnswers,

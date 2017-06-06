@@ -249,7 +249,7 @@ var QuestionPanel = (function (_React$Component) {
 						className: this.props.classes.backButton }) : undefined,
 					React.createElement(Button, { text: 'Save',
 						onClick: this.handleSaveButtonClick.bind(this),
-						className: this.props.classes.button }),
+						className: this.props.classes.saveButton }),
 					!this.props.button.disabled ? React.createElement(Button, { text: this.props.button.text,
 						onClick: this.handleMainButtonClick.bind(this),
 						className: this.props.classes.controlButton }) : undefined
