@@ -186,6 +186,7 @@ var QuestionPanel = (function (_React$Component) {
 		value: function render() {
 			var _this3 = this;
 
+			var actionVerb = this.props.action['default'].action;
 			var questionSets = this.props.questionSets.map(function (questionSetMeta) {
 				var questionSet = _.find(_this3.props.schema.questionSets, {
 					questionSetId: questionSetMeta.questionSetId
@@ -252,7 +253,7 @@ var QuestionPanel = (function (_React$Component) {
 						className: this.props.classes.saveButton }),
 					!this.props.button.disabled ? React.createElement(Button, { text: this.props.button.text,
 						onClick: this.handleMainButtonClick.bind(this),
-						className: this.props.classes.controlButton }) : undefined
+						className: actionVerb === "SUBMIT" ? this.props.classes.submitButton : this.props.classes.controlButton }) : undefined
 				)
 			);
 		}

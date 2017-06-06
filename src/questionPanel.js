@@ -170,6 +170,7 @@ class QuestionPanel extends React.Component {
 	}
 
 	render() {
+		var actionVerb = this.props.action['default'].action;
 		var questionSets = this.props.questionSets.map(questionSetMeta => {
 			var questionSet = _.find(this.props.schema.questionSets, {
 				questionSetId: questionSetMeta.questionSetId
@@ -252,7 +253,7 @@ class QuestionPanel extends React.Component {
 						? (
 							<Button text={this.props.button.text}
 									onClick={this.handleMainButtonClick.bind(this)}
-									className={this.props.classes.controlButton}/>
+									className={actionVerb === "SUBMIT" ? this.props.classes.submitButton: this.props.classes.controlButton}/>
 						)
 						: undefined}
 				</div>

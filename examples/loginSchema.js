@@ -3,10 +3,12 @@ module.exports = {
     "form" : "login-form",
     "question" : "form-group",
     "input" : "form-control",
-    "controlButton" : "btn btn-primary pull-right",
-    "backButton" : "btn btn-default pull-left",
+    "controlButton" : "btn btn-info pull-right",
+    "backButton" : "btn btn-info pull-left",
     "errorMessage" : "alert alert-danger",
-    "buttonBar" : "button-bar"
+    "buttonBar" : "button-bar",
+    "saveButton": "btn btn-primary pull-right middle-button",
+    "submitButton": "btn btn-danger pull-right middle-button submit-button"
   },
   "formPanels" : [{
     "index" : 1,
